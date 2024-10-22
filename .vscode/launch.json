@@ -2,14 +2,33 @@
     "configurations": [
       {
         "type": "java",
-        "name": "WorkOrderProServiceApplication",
+        "name": "workoutserviceApplication",
         "request": "launch",
-        "mainClass": "com.wsu.workorderproservice.WorkOrderProServiceApplication",
-        "projectName": "microservices-assignment-1",
+        "mainClass": "com.wsu.workoutservice.workoutserviceApplication",
+        "projectName": "microservices-assignment-7-ChaseEnnis"
+      },
+      {
+        "type": "java",
+        "name": "WorkoutServiceApplication",
+        "request": "launch",
+        "mainClass": "com.wsu.workoutservice.WorkoutServiceApplication",
+        "projectName": "microservices-assignment-7-ChaseEnnis",
         "args": "",
         "env": {
           "SERVER_PORT": "8080",
-          "SERVER_CONTEXT_PATH": "/work-order-pro-service"
+          "SERVER_CONTEXT_PATH": "/workout-service"
+        }
+      },
+      {
+        "type": "java",
+        "name": "WorkoutServiceApplication",
+        "request": "launch",
+        "mainClass": "com.wsu.workoutservice.WorkoutServiceApplication",
+        "projectName": "workout",
+        "args": "",
+        "env": {
+          "SERVER_PORT": "8080",
+          "SERVER_CONTEXT_PATH": "/workout-service"
         }
       }
     ]
