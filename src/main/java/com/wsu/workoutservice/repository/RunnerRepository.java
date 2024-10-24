@@ -1,6 +1,6 @@
 package com.wsu.workoutservice.repository;
 
-import com.wsu.workoutDB.model.Runner;
+import com.wsu.workoutservice.model.Runner;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

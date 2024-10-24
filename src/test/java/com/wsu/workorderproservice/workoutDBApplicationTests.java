@@ -1,4 +1,4 @@
-package com.wsu.workoutDB;
+package com.wsu.workoutservice;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

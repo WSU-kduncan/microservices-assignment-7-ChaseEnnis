@@ -5,8 +5,8 @@ package com.wsu.workoutservice.service;
 import com.wsu.workoutservice.dto.RunnerDTO;
 import com.wsu.workoutservice.exception.DatabaseErrorException;
 import com.wsu.workoutservice.exception.InvalidRequestException;
-import com.wsu.workoutDB.model.Runner;
-import com.wsu.workoutDB.repository.RunnerRepository;
+import com.wsu.workoutservice.model.Runner;
+import com.wsu.workoutservice.repository.RunnerRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
