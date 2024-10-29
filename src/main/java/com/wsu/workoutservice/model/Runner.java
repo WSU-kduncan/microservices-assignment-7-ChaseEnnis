@@ -1,5 +1,6 @@
 package com.wsu.workoutservice.model;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 import jakarta.persistence.Column;
@@ -27,6 +28,9 @@ public class Runner {
     @Column(name = "runnerID")
     private Integer id;
 
+    @Column(name= "email")
+    private String email;
+
     @Column(name = "firstName")
     private String firstName;
 
@@ -37,12 +41,12 @@ public class Runner {
     private String gender;
 
     @Column(name = "height")
-    private DecimalFormat addressLine2;
+    private BigDecimal height;
 
     @Column(name = "age")
-    private Integer city;
+    private Integer age;
 
     @Column(name = "weight")
-    private DecimalFormat state;
+    private BigDecimal weight;
 
 }

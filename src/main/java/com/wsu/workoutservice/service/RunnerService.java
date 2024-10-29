@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 import static com.wsu.workoutservice.utilities.CommonUtils.sort;
@@ -45,8 +46,8 @@ public class RunnerService {
             return runners.map(runner -> RunnerDTO.builder()
                     .id((Integer) runner[0]). email((String) runner[1])
                     .firstName((String) runner[2]).lastName((String) runner[4])
-                    .gender((String) runner[5]). height((DecimalFormat) runner[6])
-                    .age((Integer) runner[7]) 
+                    .gender((String) runner[5]).height(Double.valueOf((String)runner[6]) )
+                    .age((Integer) runner[7]).weight(Double.valueOf((String)runner[8] ))
                     .build());
         } catch (Exception e) {
             log.error("Failed to retrieve runners. search:{}, sortField:{}, sortOrder:{}, page:{}, rpp:{}. Exception:",
@@ -79,10 +80,11 @@ public class RunnerService {
      * This method used for convert Entity model class to DTO
      */
     public RunnerDTO convertToDTO(Runner runner) {
-        return RunnerDTO.builder().id(runner.getId()).firstName(runner.getFirstName())
+        return RunnerDTO.builder().id(runner.getId()).email(runner.getEmail())
+                .firstName(runner.getFirstName())
                 .lastName(runner.getLastName()).gender(runner.getGender())
-                //.height(runner.getHeight()).age(runner.getAge())
-                //.weight(runner.getWeight())
+                .height(runner.getHeight()).age(runner.getAge())
+                .weight(runner.getWeight())
                 .build();
     }
 
@@ -91,12 +93,12 @@ public class RunnerService {
      */
     public Runner convertToEntity(RunnerDTO runnerDTO) {
         return Runner.builder()
-                // .email(runnerDTO.getEmail())
+                 .email(runnerDTO.getEmail())
                 .firstName(runnerDTO.getFirstName())
                 .lastName(runnerDTO.getLastName())
                 .gender(runnerDTO.getGender())
-                // .height(runnerDTO.getHeight())
-                // .age(runnerDTO.getAge())
+                .height(runnerDTO.getHeight())
+                .age(runnerDTO.getAge())
                 .build();
     }
 

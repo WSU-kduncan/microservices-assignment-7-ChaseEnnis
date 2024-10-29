@@ -52,7 +52,7 @@ public class RunnerController {
     public ResponseEntity<ServiceResponseDTO> getRunners(@RequestParam(required = false) String search,
                                                   @RequestParam(required = false, defaultValue = "1") Integer page,
                                                   @RequestParam(required = false, defaultValue = "10") Integer rpp,
-                                                  @RequestParam(required = false, defaultValue = "dateLastUpdated") String sortField,
+                                                  @RequestParam(required = false, defaultValue = "lastName") String sortField,
                                                   @RequestParam(required = false, defaultValue = Constants.DESC) String sortOrder) {
         Page<RunnerDTO> runnerDTOPagePage = runnerService.get(search, sortField, sortOrder, page, rpp);
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Runners retrieved successfully.", PAGE_COUNT,
@@ -103,9 +103,6 @@ public class RunnerController {
          runnerService.delete(id);
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of("MESSAGE", "Successfully deleted runner"))
         .build(), HttpStatus.OK);  // Include the HTTP status here
-    }
-
-
-     
+    }  
 
 }

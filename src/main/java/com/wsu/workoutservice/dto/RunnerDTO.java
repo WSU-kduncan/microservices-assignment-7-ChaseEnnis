@@ -39,7 +39,7 @@ public class RunnerDTO {
     @NotBlank(message = "Gender must not be null or blank")
     @Size(max=10)
 
-    private DecimalFormat height;
+    private Double height;
     @NotBlank(message = "Height must not be null or blank")
     @Size(max=100)
 
@@ -47,6 +47,6 @@ public class RunnerDTO {
     @NotBlank(message = "Age must not be null or blank")
     @Size(max=100)
 
-    private DecimalFormat weight;
+    private Double weight;
    
 }
