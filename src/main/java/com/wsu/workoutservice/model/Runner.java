@@ -1,7 +1,7 @@
 package com.wsu.workoutservice.model;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -15,7 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
+
 
 import static com.wsu.workoutservice.utilities.CommonUtils.sort;
 
