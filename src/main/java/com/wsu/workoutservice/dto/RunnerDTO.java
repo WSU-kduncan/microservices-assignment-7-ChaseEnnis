@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 @Getter
@@ -39,7 +40,7 @@ public class RunnerDTO {
     @NotBlank(message = "Gender must not be null or blank")
     @Size(max=10)
 
-    private Double height;
+    private BigDecimal height;
     @NotBlank(message = "Height must not be null or blank")
     @Size(max=100)
 
@@ -47,6 +48,6 @@ public class RunnerDTO {
     @NotBlank(message = "Age must not be null or blank")
     @Size(max=100)
 
-    private Double weight;
+    private BigDecimal weight;
    
 }
