@@ -2,7 +2,9 @@
 
 package com.wsu.workoutservice.dto;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,8 +23,8 @@ import java.math.BigDecimal;
 public class RunnerDTO {
 
     private Integer id;
-    @NotBlank(message = "RunnerID must not be null or blank")
-    @Size(max = 10)
+    @NotNull(message = "id must not be null or blank")
+    @Min(value = 0, message = "id must be greater than 0")
 
     private String email;
     @NotBlank(message = "Email must not be null or blank")
@@ -41,13 +43,13 @@ public class RunnerDTO {
     @Size(max=10)
 
     private BigDecimal height;
-    @NotBlank(message = "Height must not be null or blank")
-    @Size(max=100)
+    @NotNull(message = "Height must not be null or blank")
+    @Min(value = 0, message = "height must be greater than 0")
 
     private Integer age;
-    @NotBlank(message = "Age must not be null or blank")
-    @Size(max=100)
+    @NotNull(message = "Age must not be null or blank")
+    @Min(value = 0, message = "Age must be greater than 0")
 
     private BigDecimal weight;
-   
+    
 }
