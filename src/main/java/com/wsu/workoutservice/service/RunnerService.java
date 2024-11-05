@@ -83,9 +83,9 @@ public class RunnerService {
         return RunnerDTO.builder().id(runner.getId()).email(runner.getEmail())
                 .firstName(runner.getFirstName())
                 .lastName(runner.getLastName()).gender(runner.getGender())
-                //.height(runner.getHeight())
+                .height(runner.getHeight())
                 .age(runner.getAge())
-                //.weight(runner.getWeight())
+                .weight(runner.getWeight())
                 .build();
     }
 
@@ -93,15 +93,15 @@ public class RunnerService {
      * This method used for convert DTO to entity model class.
      */
     public Runner convertToEntity(RunnerDTO runnerDTO) {
-        return Runner.builder()
-                 .email(runnerDTO.getEmail())
-                .firstName(runnerDTO.getFirstName())
-                .lastName(runnerDTO.getLastName())
-                .gender(runnerDTO.getGender())
-                //.height(runnerDTO.getHeight())
-                .age(runnerDTO.getAge())
-                .build();
-    }
+    return Runner.builder()
+            .email(runnerDTO.getEmail())
+            .firstName(runnerDTO.getFirstName()) // Match exactly with the DTO's naming
+            .lastName(runnerDTO.getLastName())
+            .gender(runnerDTO.getGender())
+            .height(runnerDTO.getHeight())
+            .age(runnerDTO.getAge())
+            .build();
+}
 
 
     public RunnerDTO update(Integer id, RunnerDTO runnerDTO) {

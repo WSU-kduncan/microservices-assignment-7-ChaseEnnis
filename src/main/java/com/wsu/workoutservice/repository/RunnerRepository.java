@@ -11,7 +11,7 @@ public interface RunnerRepository extends JpaRepository<Runner, Integer> {
 
     @Query(nativeQuery = true, value = 
     //"Select * From WorkoutDB.Runner"
-    "Select r.runnerID AS id, r.email as email, r.firstName AS firstName, r.lastName AS lastName, "
+    "Select r.runner_id AS id, r.email as email, r.first_name AS firstName, r.last_name AS lastName, "
             + "r.gender AS gender, r.height AS height, r.age AS age, r.weight AS weight "
             + "FROM Runner r WHERE :search IS NULL OR (r.firstName = :search)"
             )

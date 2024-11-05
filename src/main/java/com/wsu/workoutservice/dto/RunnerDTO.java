@@ -22,34 +22,43 @@ import java.math.BigDecimal;
 @Builder
 public class RunnerDTO {
 
-    private Integer id;
+    
     @NotNull(message = "id must not be null or blank")
     @Min(value = 0, message = "id must be greater than 0")
+    private Integer id; 
 
-    private String email;
+    
     @NotBlank(message = "Email must not be null or blank")
     @Size(max = 25)
+    private String email;
 
-    private String firstName;
+    
     @NotBlank(message = "First Name must not be null or blank")
     @Size(max = 25)
+    private String firstName;
 
-    private String lastName;
+
     @NotBlank(message = "Last Name must not be null or blank")
     @Size(max = 50)
+    private String lastName;
     
-    private String gender;
+   
     @NotBlank(message = "Gender must not be null or blank")
     @Size(max=10)
+    private String gender;
 
-    private BigDecimal height;
+    
     @NotNull(message = "Height must not be null or blank")
     @Min(value = 0, message = "height must be greater than 0")
+    private BigDecimal height;
 
-    private Integer age;
+    
     @NotNull(message = "Age must not be null or blank")
     @Min(value = 0, message = "Age must be greater than 0")
+    private Integer age;
 
+    @NotNull(message = "Height must not be null or blank")
+    @Min(value = 0, message = "height must be greater than 0")
     private BigDecimal weight;
     
 }

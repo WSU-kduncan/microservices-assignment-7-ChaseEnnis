@@ -25,16 +25,16 @@ import lombok.Setter;
 public class Runner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "runnerID")
+    @Column(name = "runner_id")
     private Integer id;
 
     @Column(name= "email")
     private String email;
 
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "gender")
