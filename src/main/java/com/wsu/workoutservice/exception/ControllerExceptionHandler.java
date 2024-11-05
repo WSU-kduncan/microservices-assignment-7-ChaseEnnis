@@ -3,12 +3,12 @@ package com.wsu.workoutservice.exception;
 
 import com.wsu.workoutservice.dto.ServiceResponseDTO;
 import java.util.Map;
-import java.util.stream.Collectors;
+//import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
+//import org.springframework.validation.FieldError;
+//import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -46,12 +46,12 @@ public class ControllerExceptionHandler {
         return e.getCause().getMessage() + " " + e.getCause().getCause().getMessage();
     }
 
-
+    /*
     private String formatErrorCode(String errorCode) {
         if (errorCode == null) {
             return "";
         }
         return errorCode.replaceAll("([a-z])([A-Z])", "$1_$2").toUpperCase();
     }
-
+ */
 }
