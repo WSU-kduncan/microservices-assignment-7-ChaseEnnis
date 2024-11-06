@@ -23,8 +23,7 @@ import java.math.BigDecimal;
 public class RunnerDTO {
 
     
-    @NotNull(message = "id must not be null or blank")
-    @Min(value = 0, message = "id must be greater than 0")
+
     private Integer id; 
 
     
