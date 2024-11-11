@@ -1,3 +1,4 @@
-Chase= Runner
-Conner= Evaluation
-Blake= Workout
+* Chase= Runner 
+* Conner= Evaluation 
+* Blake= Workout 
+ 
