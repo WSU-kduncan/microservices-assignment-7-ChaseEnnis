@@ -1,6 +1,7 @@
 package com.wsu.workoutservice.controller;
 
-import org.hibernate.mapping.Map;
+import java.util.Map;
+//import org.hibernate.mapping.Map;
 //import org.hibernate.query.Page;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
