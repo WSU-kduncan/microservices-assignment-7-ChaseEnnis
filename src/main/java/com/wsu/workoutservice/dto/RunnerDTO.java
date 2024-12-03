@@ -14,6 +14,8 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Getter
 @Setter
@@ -32,6 +34,7 @@ public class RunnerDTO {
     private String email;
 
     
+    /* */
     @NotBlank(message = "First Name must not be null or blank")
     @Size(max = 25)
     private String firstName;
@@ -41,21 +44,23 @@ public class RunnerDTO {
     @Size(max = 50)
     private String lastName;
     
-   
+    @JsonIgnore
     @NotBlank(message = "Gender must not be null or blank")
     @Size(max=10)
     private String gender;
 
     
+    @JsonIgnore
     @NotNull(message = "Height must not be null or blank")
     @Min(value = 0, message = "height must be greater than 0")
     private BigDecimal height;
 
-    
+    @JsonIgnore
     @NotNull(message = "Age must not be null or blank")
     @Min(value = 0, message = "Age must be greater than 0")
     private Integer age;
 
+    @JsonIgnore
     @NotNull(message = "Height must not be null or blank")
     @Min(value = 0, message = "height must be greater than 0")
     private BigDecimal weight;
