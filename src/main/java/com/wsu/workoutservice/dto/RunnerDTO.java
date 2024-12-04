@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.Builder.Default;
 
 import java.math.BigDecimal;
 
@@ -44,25 +45,5 @@ public class RunnerDTO {
     @Size(max = 50)
     private String lastName;
     
-    @JsonIgnore
-    @NotBlank(message = "Gender must not be null or blank")
-    @Size(max=10)
-    private String gender;
-
-    
-    @JsonIgnore
-    @NotNull(message = "Height must not be null or blank")
-    @Min(value = 0, message = "height must be greater than 0")
-    private BigDecimal height;
-
-    @JsonIgnore
-    @NotNull(message = "Age must not be null or blank")
-    @Min(value = 0, message = "Age must be greater than 0")
-    private Integer age;
-
-    @JsonIgnore
-    @NotNull(message = "Height must not be null or blank")
-    @Min(value = 0, message = "height must be greater than 0")
-    private BigDecimal weight;
     
 }

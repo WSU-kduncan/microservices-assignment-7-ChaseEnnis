@@ -37,16 +37,4 @@ public class Runner {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "gender")
-    private String gender;
-
-    @Column(name = "height")
-    private BigDecimal height;
-
-    @Column(name = "age")
-    private Integer age;
-
-    @Column(name = "weight")
-    private BigDecimal weight;
-
 }

@@ -44,10 +44,10 @@ public class RunnerService {
             
             // Map the retrieved Runner entities to RunnerDTO objects
             return runners.map(runner -> RunnerDTO.builder()
-                    .id((Integer) runner[0]). email((String) runner[1])
-                    .firstName((String) runner[2]).lastName((String) runner[3])
-                    .gender((String) runner[4]).height((BigDecimal)runner[5] )
-                    .age((Integer) runner[6]).weight((BigDecimal)runner[7] )
+                    .id((Integer) runner[0])
+                    .email((String) runner[1])
+                    .firstName((String) runner[2])
+                    .lastName((String) runner[3])
                     .build());
         } catch (Exception e) {
             log.error("Failed to retrieve runners. search:{}, sortField:{}, sortOrder:{}, page:{}, rpp:{}. Exception:",
@@ -82,10 +82,7 @@ public class RunnerService {
     public RunnerDTO convertToDTO(Runner runner) {
         return RunnerDTO.builder().id(runner.getId()).email(runner.getEmail())
                 .firstName(runner.getFirstName())
-                .lastName(runner.getLastName()).gender(runner.getGender())
-                .height(runner.getHeight())
-                .age(runner.getAge())
-                .weight(runner.getWeight())
+                .lastName(runner.getLastName())
                 .build();
     }
 
@@ -97,9 +94,6 @@ public class RunnerService {
             .email(runnerDTO.getEmail())
             .firstName(runnerDTO.getFirstName()) // Match exactly with the DTO's naming
             .lastName(runnerDTO.getLastName())
-            .gender(runnerDTO.getGender())
-            .height(runnerDTO.getHeight())
-            .age(runnerDTO.getAge())
             .build();
 }
 
